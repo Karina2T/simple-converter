@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel='stylesheet' href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Poetsen+One&family=Protest+Riot&family=Sigmar&display=swap" rel="stylesheet">
+        <title>My Web Page</title>
+    </head>
+    <body>
+        <main class="container">
+            <header class="headerConverter">
+                <h1>Convert Characters to Morse Code</h1>
+                <p class="titleMorse">
+                    -.-. --- -. ...- . .-. - / -.-. .... .- .-. .- -.-. - . .-. ... / - --- / -- --- .-. ... . / -.-. --- -.. .  
+                </p>
+            </header>
+            <div class="inputResult">
+                <section class="textArea">
+                    <label for="inputText">Enter the characters you want to convert:</label>
+                    <textarea id="inputText" rows="3" cols="45" placeholder="Write your message here..." maxlength="200" required ></textarea>
+                  <!--  <span id="charCounter">0 / 150</span>-->
+             <section class="buttons">
+                    <button id="convertedButton">Translate to Morse</button>  
+             </section>
+                </section>
+                <section class="resultArea">
+                    <label for="convertedText">Texted Converted</label>
+                    <textarea id="convertedText" rows="3" cols="45" placeholder="Showing text converted"></textarea>
+                 <section>
+                    <button id="clearButton">Clear</button>
+                 </section>    
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: #1b1f3A;
+    color: #e4e7f4;
+    font-family: "Protest Riot", sans-serif;
+}
+
+.headerConverter{
+    font-size: 1.5rem;
+    margin: 30px;
+}
+
+.headerConverter img{
+    width: 150px;
+    height: 90px;
+}
+
+.inputResult{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 100px;
+    margin: 100px;
+}
+
+.textArea, .resultArea{
+    display: flex;
+    flex-direction: column;
+}
+
+.textArea textarea{
+    resize: none;
+    padding-bottom: 20px;
+    position: relative;
+    border-radius: 10px;
+    font-family: "Protest Riot", sans-serif;
+}
+
+textArea::after{
+    content: "0 /150";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: gray;
+} 
+
+.inputResult label{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+
+.inputResult textarea{
+    width: 100%;
+    height: 150px;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-color:   #beb6b6;
+    border-radius: 10px;
+        font-family: "Protest Riot", sans-serif;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#convertedButton{
+    width: 40%;
+    padding: 9px;
+    font-size: 1.2rem;
+    margin: 50px;
+    background-color: #4B6EAF;
+    color: #e4e7f4;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Protest Riot", sans-serif;
+    
+}
+
+#convertedButton:hover, #clearButton:hover{
+    background-color: #2D5B9C;
+    color: #E4E7F4;
+}
+
+#clearButton{
+    width: 25%;
+    padding: 9px;
+    font-size: 1.2rem;
+    margin: 50px;
+    background-color: #4B6EAF;
+    color: #e4e7f4;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Protest Riot", sans-serif;
+}
+
