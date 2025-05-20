@@ -8,43 +8,50 @@ body{
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 150px;
-    background-color: #1b1f3A;
-    color: #e4e7f4;
+    margin-top: 10%;
+    background-color: #1B1F3A;
+    color:  #E4E7F4;
     font-family: "Protest Riot", sans-serif;
+}
+
+.container{
+    max-width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .headerConverter{
     font-size: 1.5rem;
-    margin: 30px;
+    margin: 3%;
 }
 
-.headerConverter img{
-    width: 150px;
-    height: 90px;
+.headerConverter p{
+    font-size: 2rem;
+    margin: 9%;
 }
 
 .inputResult{
     display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 100px;
-    margin: 100px;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2%;
 }
 
 .textArea, .resultArea{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%; 
 }
 
-.textArea textarea{
-    resize: none;
-    padding-bottom: 20px;
-    position: relative;
-    border-radius: 10px;
-    font-family: "Protest Riot", sans-serif;
-}
-
-textArea::after{
+/*
+ textArea::after{
     content: "0 /150";
     position: absolute;
     bottom: 10px;
@@ -52,22 +59,34 @@ textArea::after{
     font-size: 12px;
     color: gray;
 } 
+*/
 
 .inputResult label{
     font-size: 1.3rem;
-    margin-bottom: 20px;
+    margin-bottom: 3.4rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-height: 80%;
+    min-height: 50px;
 }
 
 
 .inputResult textarea{
+    resize: none;
     width: 100%;
-    height: 150px;
+    flex-grow: 1;
+    max-width: 500px;
+    min-height: 155px;
+    max-height: 350px;
     font-size: 1.2rem;
-    padding: 10px;
-    border-color:   #beb6b6;
-    border-radius: 10px;
-        font-family: "Protest Riot", sans-serif;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 3px solid #ccc;
+    box-shadow: 15px 25px 10px rgb(0, 0, 0, 0.2);        
+    font-family: "Protest Riot", sans-serif;
 }
+
 
 .buttons{
     display: flex;
@@ -76,32 +95,104 @@ textArea::after{
 }
 
 #convertedButton{
-    width: 40%;
+    width: 80%;
     padding: 9px;
     font-size: 1.2rem;
     margin: 50px;
-    background-color: #4B6EAF;
+    background-color: #007bff;
+    border-color: #9EC1F9;
     color: #e4e7f4;
-    border-radius: 8px;
+    border-radius: 17px;
     cursor: pointer;
     font-family: "Protest Riot", sans-serif;
     
 }
 
 #convertedButton:hover, #clearButton:hover{
-    background-color: #2D5B9C;
+    background-color: #0056b3;
     color: #E4E7F4;
 }
 
+
 #clearButton{
-    width: 25%;
+    width: 90%;
     padding: 9px;
     font-size: 1.2rem;
     margin: 50px;
-    background-color: #4B6EAF;
+    background-color: #007bff;
+    border-color: #9EC1F9;
     color: #e4e7f4;
-    border-radius: 8px;
+    border-radius: 17px;
     cursor: pointer;
     font-family: "Protest Riot", sans-serif;
+    
 }
 
+@media (max-width: 600px){
+    .inputResult{
+        grid-template-columns: 1fr;
+    }
+
+    .textArea, .resultArea{
+        max-width: 100%;
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 768px){
+    body{
+        background-color: red;
+        font-size: 15rem;
+    }
+
+    .container{
+        max-width: 100%;
+    }
+
+    .headerConverter{
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .inputResult{
+        grid-template-columns: 1fr;
+    }
+
+    .inputResult label{
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 640px ) and (max-width: 800px){
+    body{
+        background-color: yellow;
+        font-size: 15rem;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .container{
+        max-width: 100%;
+    }
+
+    .headerConverter{
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    /*
+    .inputResult{
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: 1%;
+    }
+
+    .inputResult label{
+       font-size: 1.6rem;
+    }
+*/
+}

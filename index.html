@@ -7,7 +7,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Poetsen+One&family=Protest+Riot&family=Sigmar&display=swap" rel="stylesheet">
-        <title>My Web Page</title>
+        <title>Converter Morse Code</title>
+        <link rel='icon' href="./public/logo-Photoroom.png" type="imagen/x/ixon" />
     </head>
     <body>
         <main class="container">
@@ -20,20 +21,22 @@
             <div class="inputResult">
                 <section class="textArea">
                     <label for="inputText">Enter the characters you want to convert:</label>
-                    <textarea id="inputText" rows="3" cols="45" placeholder="Write your message here..." maxlength="200" required ></textarea>
-                  <!--  <span id="charCounter">0 / 150</span>-->
+                    <textarea id="inputText" rows="3" cols="40" maxLength="60"  placeholder="Write your message here..." maxlength="200" required ></textarea>
+                  <span id="charCounter">0 / 60</span>
              <section class="buttons">
                     <button id="convertedButton">Translate to Morse</button>  
              </section>
                 </section>
                 <section class="resultArea">
-                    <label for="convertedText">Texted Converted</label>
-                    <textarea id="convertedText" rows="3" cols="45" placeholder="Showing text converted"></textarea>
-                 <section>
+                    <label for="convertedText">Texted Converted </label>
+                    <textarea id="convertedText" rows="3" cols="45" maxlength="150" placeholder="Showing text converted" readonly></textarea>
+                     <span id="chartCounter">0 / 60</span>
+                 <section class="buttons">
                     <button id="clearButton">Clear</button>
                  </section>    
                 </section>
             </div>
         </main>
+        <script type="module" src="script.js" ></script>
     </body>
 </html>
