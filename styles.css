@@ -15,7 +15,7 @@ body{
 }
 
 .container{
-    max-width: 70%;
+    max-width: 95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,11 +26,29 @@ body{
 .headerConverter{
     font-size: 1.5rem;
     margin: 3%;
+    width: 100%;
+    max-width: 1500px;
+
+}
+
+.headerConverter h1{
+    font-size: 4rem;
+
+}
+
+.headerConverter h1:hover{  
+    cursor: pointer;
+}
+
+.morseTitle{
+    width: 100%;
+    height: 150px;
+    margin: 20px 0 20px 0;
 }
 
 .headerConverter p{
-    font-size: 2rem;
-    margin: 9%;
+    font-size: 1.9rem;
+    padding: 30px;
 }
 
 .inputResult{
