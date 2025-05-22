@@ -13,10 +13,12 @@
     <body>
         <main class="container">
             <header class="headerConverter">
-                <h1>Convert Characters to Morse Code</h1>
+                <h1 class="mouseover">Convert Characters to Morse Code</h1>
+                <div class="morseTitle">
                 <p class="titleMorse">
-                    -.-. --- -. ...- . .-. - / -.-. .... .- .-. .- -.-. - . .-. ... / - --- / -- --- .-. ... . / -.-. --- -.. .  
+                    -.-. --- -. ...- . .-. - / -.-. .... .- .-. .- -.-. - . .-. ... / - --- / -- --- .-. ... . / -.-. --- -.. .
                 </p>
+            </div>
             </header>
             <div class="inputResult">
                 <section class="textArea">
@@ -30,7 +32,7 @@
                 <section class="resultArea">
                     <label for="convertedText">Texted Converted </label>
                     <textarea id="convertedText" rows="3" cols="45" maxlength="150" placeholder="Showing text converted" readonly></textarea>
-                     <span id="chartCounter">0 / 60</span>
+                     <span id="charConverted">0 </span>
                  <section class="buttons">
                     <button id="clearButton">Clear</button>
                  </section>    
