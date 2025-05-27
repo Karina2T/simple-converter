@@ -9,14 +9,28 @@ const charConverted = document.getElementById('charConverted');
 const title = document.querySelector('.mouseover');
 const subtitle = document.querySelector('.titleMorse');
 
+let fixedTitle = false;
 
 title.addEventListener('mouseover', () => {
-    subtitle.style.display = 'block';
-})
-title.addEventListener('mouseleave', () => {
-    subtitle.style.display = 'none';
+    subtitle.textContent = "-.-. --- -. ...- . .-. - / -.-. .... .- .-. .- -.-. - . .-. ... / - --- / -- --- .-. ... . / -.-. --- -.. .";
 })
 
+title.addEventListener('mouseleave', () => {
+    if(!fixedTitle){
+        subtitle.textContent = "";
+    }
+});
+
+title.addEventListener('click', () => {
+    fixedTitle = !fixedTitle;
+})
+
+
+
+// title.addEventListener('click', () => {
+//     console.log('Title clicked')
+//     subtitle.style.display = 'block';
+// })
 
 //Accesing the buttono to convert with a Event
 translateButton.addEventListener("click", () => {
@@ -45,8 +59,9 @@ translateButton.addEventListener("click", () => {
 function clearAction(){
     textConverted.value = ""
     textInputed.value = ""
-    charCounter.innerText = "0 / 60"
+    charCounter.innerText = "0 / 150"
     charCounter.style.color = 'white'
+    charConverted.innerText = "0 characters";
 }
 
 deletedButton.addEventListener("click", clearAction )
@@ -54,12 +69,17 @@ deletedButton.addEventListener("click", clearAction )
 
 //Changing the color depending on the charcters left
 textInputed.addEventListener("input", () => {
-    charCounter.innerText = `${textInputed.value.length} / 60`
+    charCounter.innerText = `${textInputed.value.length} / 150`
+
     
-    textInputed.value.length === 57 ? charCounter.style.color = "rgb(255, 255, 0)" 
-    : textInputed.value.length === 58 ? charCounter.style.color = "rgb(255, 128, 0)" 
-    : textInputed.value.length >= 59 ? charCounter.style.color = "rgb(255, 0, 0)" 
+    textInputed.value.length === 147 ? charCounter.style.color = "rgb(255, 255, 0)" 
+    : textInputed.value.length === 148 ? charCounter.style.color = "rgb(255, 128, 0)" 
+    : textInputed.value.length >= 149 ? charCounter.style.color = "rgb(255, 0, 0)" 
     : charCounter.style.color = 'white'
 })
 
-//Try the delete button, desapiring
+const inputedText = textInputed.value;
+
+inputedText.split('').forEach((character) => {
+    morseCodeMap.has(character)
+})
