@@ -9,6 +9,8 @@ const charConverted = document.getElementById('charConverted');
 const title = document.querySelector('.mouseover');
 const subtitle = document.querySelector('.titleMorse');
 
+
+//Hide the subtitle initially
 let fixedTitle = false;
 
 title.addEventListener('mouseover', () => {
@@ -27,12 +29,7 @@ title.addEventListener('click', () => {
 
 
 
-// title.addEventListener('click', () => {
-//     console.log('Title clicked')
-//     subtitle.style.display = 'block';
-// })
-
-//Accesing the buttono to convert with a Event
+//Accesing the button to convert with a Event
 translateButton.addEventListener("click", () => {
     //Accesing the entered text and converting it to upperCase
     const valor = textInputed.value.toUpperCase();
@@ -52,10 +49,11 @@ translateButton.addEventListener("click", () => {
     const morseCharacters = textConverted.value.split("").filter(char => char === "." || char === "-").length;
     charConverted.innerText = `${morseCharacters} characters`;
 
+
 })
 
 
-//Function to clear the textarea
+//Function to clear the textarea and converted Area 
 function clearAction(){
     textConverted.value = ""
     textInputed.value = ""
@@ -76,10 +74,35 @@ textInputed.addEventListener("input", () => {
     : textInputed.value.length === 148 ? charCounter.style.color = "rgb(255, 128, 0)" 
     : textInputed.value.length >= 149 ? charCounter.style.color = "rgb(255, 0, 0)" 
     : charCounter.style.color = 'white'
+
+    //Validating the characters entered
+
+
+
+     const validCharacters = textInputed.value
+
+    if(validCharacters === ''){
+         console.log('Please enter a character');
+         return;
+    } 
+
+        const words = validCharacters.split("");
+        let errorShow = false
+
+         words.forEach(element => {
+             console.log('Evaluando')
+
+              if(!Object.prototype.hasOwnProperty.call(morseCodeMap, element.toUpperCase())) {
+                if(!errorShow){
+                    alert(`The character "${element}" is not valid`);
+                    errorShow = true;
+                }
+             }
+         })
+     
+
 })
 
-const inputedText = textInputed.value;
 
-inputedText.split('').forEach((character) => {
-    morseCodeMap.has(character)
-})
+
+

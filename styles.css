@@ -16,7 +16,6 @@ body{
 
 .container{
     max-width: 95%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
@@ -25,14 +24,16 @@ body{
 
 .headerConverter{
     font-size: 1.5rem;
-    margin: 3%;
+    margin: 3% 0 3% 0;
     width: 100%;
-    max-width: 1500px;
+    max-width: 100%;
 
 }
 
-.headerConverter h1{
-    font-size: 4rem;
+.mouseover{
+    font-size: 3rem;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
 
 }
 
@@ -42,9 +43,8 @@ body{
 
 .morseTitle{
     width: 100%;
-    height: 100px;
+    height: 10%;
     margin: 20px 0 20px 0;
-    background-color: red;
 }
 
 .headerConverter p{
@@ -66,7 +66,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 90%; 
+    max-width: 100%; 
 }
 
 /*
@@ -153,6 +153,39 @@ span{
     margin-top: 10px;
 }
 
+footer{
+    width: 100%;
+    margin-top: 10%;
+    max-height: 60vh;
+    height: 10vh;
+}
+
+.footerText{
+    font-size: 1rem;
+}
+.footerText h5{
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #9EC1F9;
+    font-size: 1.3rem;
+}
+
+
+.convertionInfo{
+    margin-top: 12%;
+}
+
+
+
+
 @media (max-width: 600px){
     .inputResult{
         grid-template-columns: 1fr;
@@ -166,8 +199,7 @@ span{
 
 @media (min-width: 600px) and (max-width: 768px){
     body{
-        background-color: red;
-        font-size: 15rem;
+        font-size: 1rem;
     }
 
     .container{
@@ -190,8 +222,7 @@ span{
 
 @media (min-width: 640px ) and (max-width: 800px){
     body{
-        background-color: yellow;
-        font-size: 15rem;
+        font-size: 1.2rem;
         display: flex;
         text-align: center;
         justify-content: center;
